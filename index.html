@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy November ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #F8C9D9;
+  --pink-dark: #D987A8;
+  --yellow: #FFF0B8;
+  --blue: #C9E6F5;
+  --lilac: #DCD2F5;
+  --cream: #FFF9F1;
+  --brown: #705D60;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+}
+
+.screen {
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  padding: 35px 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: appear .7s ease;
+}
+
+.screen.active {
+  display: flex;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.small-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-size: clamp(36px, 8vw, 62px);
+  line-height: 1.1;
+  color: #B96F91;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  max-width: 440px;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #8A7779;
+  margin: 0 auto 25px;
+}
+
+.script {
+  font-family: 'Caveat', cursive;
+  font-size: 27px;
+  color: var(--pink-dark);
+}
+
+.primary-btn {
+  padding: 14px 27px;
+  background: var(--pink);
+  color: #85566A;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 5px 0 #E9AFC5;
+  transition: .2s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 #E9AFC5;
+}
+
+.secondary-btn {
+  padding: 12px 23px;
+  border-radius: 30px;
+  background: white;
+  color: #B96F91;
+  border: 1.5px solid var(--pink);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.navigation {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.footer-note {
+  position: absolute;
+  bottom: 17px;
+  font-size: 11px;
+  color: #B8A5A4;
+  letter-spacing: 1px;
+}
+
+/* Decorative elements */
+
+.decor {
+  position: absolute;
+  font-size: 25px;
+  opacity: .7;
+  pointer-events: none;
+  animation: float 4s ease-in-out infinite;
+}
+
+.d1 { top: 12%; left: 10%; }
+.d2 { top: 22%; right: 12%; animation-delay: 1s; }
+.d3 { bottom: 20%; left: 14%; animation-delay: 2s; }
+.d4 { bottom: 15%; right: 13%; animation-delay: .5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-13px) rotate(8deg); }
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10;
+  animation: sparkle 1.3s ease-out forwards;
+}
+
+@keyframes sparkle {
+  0% { opacity: 1; transform: scale(.5) rotate(0); }
+  100% { opacity: 0; transform: scale(1.5) rotate(90deg) translateY(-35px); }
+}
+
+/* Screen 1 */
+
+#screen1 {
+  background:
+    radial-gradient(circle at 15% 20%, #FCE2E9 0, transparent 25%),
+    radial-gradient(circle at 85% 80%, #E6DDF8 0, transparent 25%),
+    var(--cream);
+}
+
+.gift-box {
+  font-size: 82px;
+  margin: 15px 0 22px;
+  animation: giftFloat 3s ease-in-out infinite;
+}
+
+@keyframes giftFloat {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+.date-pill {
+  background: var(--yellow);
+  padding: 8px 17px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #A58B50;
+  margin-bottom: 20px;
+}
+
+/* Screen 2: Music */
+
+#screen2 {
+  background: linear-gradient(145deg, #FCE5EC, #FFF9F1 55%, #E9E3FA);
+}
+
+.cassette {
+  width: 250px;
+  max-width: 85vw;
+  height: 165px;
+  background: #F5BFD2;
+  border: 5px solid #E9A8C0;
+  border-radius: 22px;
+  padding: 15px;
+  margin: 25px auto;
+  box-shadow: 0 12px 25px #DDA7BC55;
+  position: relative;
+}
+
+.cassette-label {
+  height: 100%;
+  background: #FFF9F1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+
+.cassette-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+  color: #B96F91;
+}
+
+.cassette-reels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.reel {
+  width: 43px;
+  height: 43px;
+  border: 5px solid #DFA3BA;
+  background: #F8D7E3;
+  border-radius: 50%;
+  position: relative;
+}
+
+.reel::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #DFA3BA;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.playing .reel {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.tape-line {
+  width: 45px;
+  height: 3px;
+  background: #DFA3BA;
+  border-radius: 10px;
+}
+
+.music-caption {
+  background: #FFFFFFB8;
+  border: 1px solid #F3D8E1;
+  padding: 18px 20px;
+  border-radius: 18px;
+  max-width: 380px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.music-status {
+  font-size: 12px;
+  color: #B17A91;
+  margin-top: 12px;
+}
+
+/* Screen 3: Bouquet preview */
+
+#screen3 {
+  background: linear-gradient(160deg, #FFF9F1, #FCE6ED);
+}
+
+.preview-card {
+  width: min(370px, 90vw);
+  padding: 25px;
+  background: #FFFFFFB8;
+  border: 1px solid #F3DDE5;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px #D7B8C422;
+  margin: 15px auto;
+}
+
+.preview-icon {
+  font-size: 65px;
+  margin: 10px;
+}
+
+/* Screen 4: Flowers and letter */
+
+#screen4 {
+  background: linear-gradient(140deg, #FFF9F1, #F8E3EC 60%, #EAE5FA);
+}
+
+.gift-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  width: min(850px, 100%);
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.bouquet-card {
+  width: min(340px, 90vw);
+  min-height: 350px;
+  background: #FFFFFFC9;
+  border-radius: 25px;
+  border: 1px solid #F1DCE5;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px #D7B8C422;
+}
+
+.bouquet-svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  overflow: visible;
+}
+
+/* FIXED FLOWER ANIMATION */
+
+.flower {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: flowerSway 3s ease-in-out infinite;
+}
+
+.flower-left { animation-delay: .4s; }
+.flower-right { animation-delay: .8s; }
+.flower-small { animation-delay: 1.2s; }
+
+@keyframes flowerSway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.letter-card {
+  width: min(340px, 90vw);
+  min-height: 350px;
+  background: #FFFDF9;
+  padding: 27px;
+  border-radius: 8px 22px 8px 22px;
+  box-shadow: 0 10px 30px #B9A1A155;
+  transform: rotate(1deg);
+  text-align: left;
+  position: relative;
+}
+
+.letter-card::before {
+  content: "♡";
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  color: var(--pink-dark);
+  font-size: 25px;
+}
+
+.letter-card h3 {
+  color: #B96F91;
+  font-size: 25px;
+  margin-bottom: 16px;
+}
+
+.letter-card p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 13px;
+  color: #827174;
+}
+
+.letter-sign {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  color: #C17B98;
+  margin-top: 18px;
+}
+
+/* Screen 5: Surprise */
+
+#screen5 {
+  background:
+    radial-gradient(circle at 15% 20%, #FCE2E9 0, transparent 25%),
+    radial-gradient(circle at 85% 80%, #E6DDF8 0, transparent 25%),
+    var(--cream);
+}
+
+.surprise-box {
+  background: #FFFFFFB8;
+  border: 1px solid #F3DDE5;
+  border-radius: 25px;
+  width: min(390px, 90vw);
+  padding: 28px;
+  box-shadow: 0 10px 30px #D7B8C422;
+  margin: 20px auto;
+}
+
+.hidden-message {
+  display: none;
+  margin-top: 20px;
+  padding: 18px;
+  background: #FFF0F4;
+  border-radius: 17px;
+  line-height: 1.9;
+  animation: appear .5s ease;
+}
+
+.hidden-message.show {
+  display: block;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 7px;
+  margin-top: 25px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #E7C9D4;
+}
+
+.dot.active {
+  width: 20px;
+  border-radius: 10px;
+  background: var(--pink-dark);
+}
+
+@media (max-width: 600px) {
+  .heading { font-size: 42px; }
+  .gift-layout { gap: 16px; }
+  .letter-card { transform: none; }
+  .screen { padding: 35px 18px 55px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="sparkleContainer"></div>
+
+<!-- SCREEN 1: OPENING -->
+
+<section class="screen active" id="screen1">
+  <span class="decor d1">✿</span>
+  <span class="decor d2">✧</span>
+  <span class="decor d3">♡</span>
+  <span class="decor d4">✿</span>
+
+  <div class="date-pill">01 NOVEMBER · A LITTLE SURPRISE</div>
+
+  <div class="gift-box">🎁</div>
+
+  <p class="small-label">A tiny gift, made with love</p>
+
+  <h1 class="heading">Happy<br>November!</h1>
+
+  <p class="subtitle">
+    A new month, a fresh little beginning,
+    and something sweet waiting just for you.
+    <br>
+    <span class="script">Let's unwrap a little happiness ♡</span>
+  </p>
+
+  <button class="primary-btn" onclick="openGift()">
+    Open your little gift ♡
+  </button>
+
+  <div class="progress-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <div class="footer-note">MADE WITH EXTRA LOVE · 2026</div>
+</section>
+
+
+<!-- SCREEN 2: MUSIC -->
+
+<section class="screen" id="screen2">
+  <span class="decor d1">♫</span>
+  <span class="decor d2">✧</span>
+  <span class="decor d3">♡</span>
+
+  <p class="small-label">A LITTLE MELODY FOR YOU</p>
+
+  <h2 class="heading">Press play,<br>take a moment.</h2>
+
+  <p class="subtitle">
+    Some moments deserve their own soundtrack.
+    <br>
+    Ada lagu kecil yang ingin menemanimu hari ini.
+  </p>
+
+  <div class="cassette" id="cassette">
+    <div class="cassette-label">
+      <div class="cassette-title">NOVEMBER MIX ♡</div>
+      <div class="cassette-reels">
+        <div class="reel"></div>
+        <div class="tape-line"></div>
+        <div class="reel"></div>
+      </div>
+      <span style="font-size:10px;letter-spacing:2px;color:#C28CA1">
+        SIDE A · PLAY FOR YOU
+      </span>
+    </div>
+  </div>
+
+  <div class="music-caption">
+    <strong>Before You</strong>
+    <br>
+    <span style="font-size:12px;color:#B17A91">
+      Benson Boone · A song for you
+    </span>
+    <p style="margin-top:12px">
+      "May this little melody remind you that
+      beautiful things can find their way to you."
+    </p>
+    <p style="font-size:12px;margin-top:8px">
+      Semoga melodi kecil ini mengingatkanmu
+      bahwa hal-hal indah selalu punya jalannya sendiri.
+    </p>
+  </div>
+
+  <div class="music-controls">
+    <button class="secondary-btn" onclick="toggleMusic()" id="musicButton">
+      ♫ Play
+    </button>
+    <button class="primary-btn" onclick="nextScreen(3)">
+      Continue →
+    </button>
+  </div>
+
+  <p class="music-status" id="musicStatus">♫ Ready to play for you</p>
+
+  <div class="progress-dots">
+    <span class="dot"></span>
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+<!-- SCREEN 3: BOUQUET PREVIEW -->
+
+<section class="screen" id="screen3">
+  <span class="decor d1">🌼</span>
+  <span class="decor d2">✧</span>
+  <span class="decor d3">♡</span>
+
+  <p class="small-label">SOMETHING BLOOMING FOR YOU</p>
+
+  <h2 class="heading">A little flower,<br>a little joy.</h2>
+
+  <p class="subtitle">
+    I have something for you.
+    But first, would you like to see it?
+    <br>
+    Ada sesuatu yang ingin kuberikan.
+  </p>
+
+  <div class="preview-card">
+    <div class="preview-icon" id="previewIcon">💐</div>
+
+    <h3 style="color:#B96F91;font-size:23px">
+      A bouquet, perhaps?
+    </h3>
+
+    <p style="font-size:13px;line-height:1.8;margin:10px 0 20px">
+      A bunch of flowers, wrapped in a little affection.
+      <br>
+      Seikat bunga kecil dengan banyak kasih sayang.
+    </p>
+
+    <button class="primary-btn" onclick="revealBouquet()">
+      Preview my bouquet ✿
+    </button>
+  </div>
+
+  <button class="secondary-btn" onclick="nextScreen(4)"
+          id="bouquetNext" style="display:none">
+    See your flowers →
+  </button>
+
+  <div class="progress-dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+<!-- SCREEN 4: FLOWERS AND LETTER -->
+
+<section class="screen" id="screen4">
+  <span class="decor d1">✿</span>
+  <span class="decor d2">✧</span>
+  <span class="decor d3">♡</span>
+
+  <p class="small-label">JUST FOR YOU, WITH LOVE</p>
+
+  <h2 class="heading">Flowers &<br>a little letter.</h2>
+
+  <p class="subtitle">
+    A little something to brighten your day.
+    <br>
+    Semoga ini bisa membuat harimu sedikit lebih indah.
+  </p>
+
+  <div class="gift-layout">
+
+    <!-- ILLUSTRATED BOUQUET -->
+
+    <div class="bouquet-card">
+
+      <svg class="bouquet-svg"
+           viewBox="0 0 300 310"
+           xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Stems -->
+        <g fill="none" stroke="#8DAF86"
+           stroke-width="5" stroke-linecap="round">
+          <path d="M105 125 Q120 205 145 270"/>
+          <path d="M150 75 Q150 190 150 270"/>
+          <path d="M195 125 Q180 205 155 270"/>
+          <path d="M80 160 Q110 220 145 270"/>
+          <path d="M220 160 Q190 220 155 270"/>
+        </g>
+
+        <!-- Leaves -->
+        <g fill="#A9C6A1">
+          <ellipse cx="108" cy="205" rx="19" ry="9"
+                   transform="rotate(30 108 205)"/>
+          <ellipse cx="190" cy="205" rx="19" ry="9"
+                   transform="rotate(-30 190 205)"/>
+          <ellipse cx="125" cy="240" rx="17" ry="8"
+                   transform="rotate(-25 125 240)"/>
+          <ellipse cx="178" cy="240" rx="17" ry="8"
+                   transform="rotate(25 178 240)"/>
+        </g>
+
+        <!-- Pink flower -->
+        <g transform="translate(105 125)">
+          <g class="flower flower-left" fill="#F8C9D9">
+            <ellipse cy="-20" rx="11" ry="19"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(60)"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(120)"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(180)"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(240)"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(300)"/>
+            <circle r="10" fill="#F4CF75"/>
+          </g>
+        </g>
+
+        <!-- Lilac flower -->
+        <g transform="translate(195 125)">
+          <g class="flower flower-right" fill="#DCD2F5">
+            <ellipse cy="-20" rx="11" ry="19"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(60)"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(120)"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(180)"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(240)"/>
+            <ellipse cy="-20" rx="11" ry="19" transform="rotate(300)"/>
+            <circle r="10" fill="#F4CF75"/>
+          </g>
+        </g>
+
+        <!-- Yellow flower -->
+        <g transform="translate(150 65)">
+          <g class="flower" fill="#FFF0B8">
+            <ellipse cy="-20" rx="12" ry="20"/>
+            <ellipse cy="-20" rx="12" ry="20" transform="rotate(60)"/>
+            <ellipse cy="-20" rx="12" ry="20" transform="rotate(120)"/>
+            <ellipse cy="-20" rx="12" ry="20" transform="rotate(180)"/>
+            <ellipse cy="-20" rx="12" ry="20" transform="rotate(240)"/>
+            <ellipse cy="-20" rx="12" ry="20" transform="rotate(300)"/>
+            <circle r="10" fill="#E8A6B7"/>
+          </g>
+        </g>
+
+        <!-- Small pink flower -->
+        <g class="flower flower-small">
+          <g fill="#F2AFC8">
+            <circle cx="80" cy="165" r="7"/>
+            <circle cx="80" cy="151" r="5"/>
+            <circle cx="94" cy="165" r="5"/>
+            <circle cx="80" cy="179" r="5"/>
+            <circle cx="66" cy="165" r="5"/>
+          </g>
+          <circle cx="80" cy="165" r="4" fill="#F4CF75"/>
+        </g>
+
+        <!-- Small lilac flower -->
+        <g class="flower flower-small">
+          <g fill="#DCD2F5">
+            <circle cx="220" cy="165" r="7"/>
+            <circle cx="220" cy="151" r="5"/>
+            <circle cx="234" cy="165" r="5"/>
+            <circle cx="220" cy="179" r="5"/>
+            <circle cx="206" cy="165" r="5"/>
+          </g>
+          <circle cx="220" cy="165" r="4" fill="#F4CF75"/>
+        </g>
+
+        <!-- Wrapping paper -->
+        <path d="M75 180 L150 295 L225 180
+                 Q150 210 75 180Z"
+              fill="#F5D5DF"/>
+
+        <path d="M75 180 L150 295 L150 205Z"
+              fill="#EAB8CB" opacity=".85"/>
+
+        <path d="M225 180 L150 295 L150 205Z"
+              fill="#F8E5EA" opacity=".95"/>
+
+        <!-- Ribbon -->
+        <path d="M145 235 Q110 215 112 245
+                 Q130 255 150 240
+                 Q170 255 188 245
+                 Q190 215 155 235Z"
+              fill="#D987A8"/>
+
+        <circle cx="150" cy="239" r="7" fill="#C87999"/>
+
+      </svg>
+
+      <p class="script">A bouquet just for you ♡</p>
+    </div>
+
+
+    <!-- LETTER -->
+
+    <div class="letter-card">
+      <p class="small-label" style="margin-bottom:10px">
+        A NOTE
+      </p>
+
+      <h3>Dear you,</h3>
+
+      <p>
+        Happy November.
+        I hope this month brings you gentle mornings,
+        unexpected happiness, and plenty of reasons to smile.
+      </p>
+
+      <p>
+        May you find beauty in little things,
+        courage in difficult moments,
+        and warmth wherever life takes you.
+      </p>
+
+      <p>
+        Semoga bulan ini dipenuhi hal-hal baik.
+        Jangan lupa memberi dirimu sendiri
+        kesempatan untuk bahagia, ya?
+      </p>
+
+      <div class="letter-sign">
+        With love, always ♡
+      </div>
+    </div>
+
+  </div>
+
+  <div class="navigation">
+    <button class="secondary-btn" onclick="nextScreen(3)">
+      ← Back
+    </button>
+
+    <button class="primary-btn" onclick="nextScreen(5)">
+      One more thing →
+    </button>
+  </div>
+
+  <div class="progress-dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot active"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+<!-- SCREEN 5: FINAL SURPRISE -->
+
+<section class="screen" id="screen5">
+  <span class="decor d1">♡</span>
+  <span class="decor d2">✧</span>
+  <span class="decor d3">🌷</span>
+  <span class="decor d4">✿</span>
+
+  <p class="small-label">A FINAL SURPRISE</p>
+
+  <h2 class="heading">One last thing...</h2>
+
+  <p class="subtitle">
+    Before you go, there's one more little wish
+    waiting just for you.
+  </p>
+
+  <div class="surprise-box">
+    <div style="font-size:65px;margin-bottom:15px" id="surpriseIcon">
+      💌
+    </div>
+
+    <h3 style="color:#B96F91;font-size:25px">
+      A wish for November
+    </h3>
+
+    <p style="font-size:13px;line-height:1.8;margin:12px 0 20px">
+      Tap the envelope and see what it holds.
+      <br>
+      Buka amplop kecil ini untuk menemukan pesanmu.
+    </p>
+
+    <button class="primary-btn" onclick="openSurprise()">
+      Open my surprise ♡
+    </button>
+
+    <div class="hidden-message" id="hiddenMessage">
+      <p style="font-family:'Caveat',cursive;font-size:25px;color:#B96F91">
+        A wish for you...
+      </p>
+
+      <p style="margin-top:10px;font-size:14px">
+        May November be kind to you.
+        May your heart feel lighter,
+        your dreams feel closer,
+        and your days be filled with little wonders.
+      </p>
+
+      <p style="margin-top:12px;font-size:13px">
+        Semoga November memperlakukanmu dengan baik.
+        Semoga ada banyak alasan untuk tersenyum,
+        banyak hal baik untuk disyukuri,
+        dan banyak kebahagiaan yang datang tanpa diduga.
+      </p>
+
+      <p class="script" style="margin-top:15px">
+        You deserve lovely things. ♡
+      </p>
+    </div>
+  </div>
+
+  <div class="navigation">
+    <button class="secondary-btn" onclick="nextScreen(4)">
+      ← Back
+    </button>
+
+    <button class="primary-btn" onclick="restartExperience()">
+      Start again ↻
+    </button>
+  </div>
+
+  <div class="progress-dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot active"></span>
+  </div>
+
+  <div class="footer-note">THANK YOU FOR BEING HERE · ♡</div>
+</section>
+
+
+<!-- MUSIC FILE -->
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="music.m4a" type="audio/mp4">
+  Your browser does not support audio.
+</audio>
+
+
+<script>
+const bgMusic = document.getElementById("bgMusic");
+const cassette = document.getElementById("cassette");
+const musicButton = document.getElementById("musicButton");
+const musicStatus = document.getElementById("musicStatus");
+
+let currentScreen = 1;
+
+
+// SCREEN NAVIGATION
+
+function showScreen(number) {
+  document.querySelectorAll(".screen").forEach(screen => {
+    screen.classList.remove("active");
+  });
+
+  document.getElementById("screen" + number).classList.add("active");
+  currentScreen = number;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  createSparkles();
+}
+
+function nextScreen(number) {
+  showScreen(number);
+}
+
+
+// OPENING BUTTON + MUSIC
+
+async function openGift() {
+  showScreen(2);
+
+  try {
+    await bgMusic.play();
+
+    cassette.classList.add("playing");
+    musicButton.textContent = "♫ Pause";
+    musicStatus.textContent = "♫ Now playing for you";
+
+  } catch (error) {
+    musicStatus.textContent = "Tap play to start the music ♡";
+    musicButton.textContent = "♫ Play";
+  }
+}
+
+
+// MUSIC PLAY / PAUSE
+
+async function toggleMusic() {
+  if (bgMusic.paused) {
+    try {
+      await bgMusic.play();
+
+      cassette.classList.add("playing");
+      musicButton.textContent = "♫ Pause";
+      musicStatus.textContent = "♫ Now playing for you";
+
+    } catch (error) {
+      musicStatus.textContent =
+        "Music couldn't play. Please check your audio file.";
+    }
+
+  } else {
+    bgMusic.pause();
+
+    cassette.classList.remove("playing");
+    musicButton.textContent = "♫ Play";
+    musicStatus.textContent = "Music paused ♡";
+  }
+}
+
+
+// BOUQUET PREVIEW
+
+function revealBouquet() {
+  document.getElementById("previewIcon").textContent = "💐";
+  document.getElementById("bouquetNext").style.display = "inline-block";
+
+  createSparkles();
+
+  document.getElementById("bouquetNext").scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
+
+// FINAL SURPRISE
+
+function openSurprise() {
+  const message = document.getElementById("hiddenMessage");
+  const icon = document.getElementById("surpriseIcon");
+
+  message.classList.add("show");
+  icon.textContent = "💝";
+
+  createSparkles();
+}
+
+
+// RESTART
+
+function restartExperience() {
+  document.getElementById("hiddenMessage").classList.remove("show");
+  document.getElementById("bouquetNext").style.display = "none";
+  document.getElementById("previewIcon").textContent = "💐";
+  document.getElementById("surpriseIcon").textContent = "💌";
+
+  bgMusic.pause();
+  bgMusic.currentTime = 0;
+
+  cassette.classList.remove("playing");
+  musicButton.textContent = "♫ Play";
+  musicStatus.textContent = "♫ Ready to play for you";
+
+  showScreen(1);
+}
+
+
+// SPARKLE EFFECT
+
+function createSparkles() {
+  const symbols = ["✦", "✧", "♡", "✿", "⋆"];
+  const container = document.getElementById("sparkleContainer");
+
+  for (let i = 0; i < 12; i++) {
+    const sparkle = document.createElement("span");
+
+    sparkle.className = "sparkle";
+    sparkle.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = Math.random() * 100 + "vh";
+
+    sparkle.style.color = [
+      "#D987A8",
+      "#C4A9E8",
+      "#E7C66E"
+    ][Math.floor(Math.random() * 3)];
+
+    sparkle.style.fontSize =
+      (12 + Math.random() * 15) + "px";
+
+    container.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 1400);
+  }
+}
+
+
+// SMALL RANDOM SPARKLES
+
+setInterval(() => {
+  if (Math.random() > 0.5) {
+    createSparkles();
+  }
+}, 4500);
+
+</script>
+
+</body>
+</html>
